@@ -18,7 +18,7 @@ class MusicController extends Controller
             'time' => $request->time
         ];
         DB::insert('insert into touroku(date,place,time) values (:date,:place,:time)', $param);
-        return redirect('main');
+        return redirect('music.main');
     }
 
     public function show(Request $request){
